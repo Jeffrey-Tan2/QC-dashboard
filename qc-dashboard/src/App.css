@@ -1,0 +1,501 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #189a62;
+  /* height: 100%; */
+  height: 10vmin;
+  line-height: 10vmin;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  font-size: calc(10px + 3vmin);
+  padding-left: 20px;
+  position: fixed;
+  top: 0;
+  z-index: -3;
+  color: white;
+  border-bottom: 2px solid grey;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container-fluid {
+  padding-left: 0px;
+  padding-right: 0px;
+  z-index: -3;
+}
+
+.container {
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 0px;
+  position: fixed;
+  width: 100%;
+  left: 23vmax;
+  overflow: scroll;
+  z-index: -3;
+}
+
+.col {
+  padding-top: 20px;
+  top: 16vmin;
+  bottom: 0;
+}
+
+
+.row {
+  height: 100%;
+  display: block;
+  position: fixed;
+  min-width: 100%;
+  top: 10vmin;
+  left: 0;
+  right: 0px;
+  overflow: scroll;
+  z-index: -2;
+}
+
+.tab {
+  position: fixed;
+  display: block;
+  top: 10vmin;
+  left: 0;
+  border-bottom: 1px solid gray;
+  height: 6vmin;
+  width: 22vmax;
+  display: flex;
+  z-index: -1;
+}
+
+.tab button {
+  display: inline-flexbox;
+  border: 1px solid gray;
+  border-top: none;
+  justify-content: center;
+  height: 100%;
+  line-height: 100%;
+  width: 11vmax;
+}
+
+.active {
+  background-color: black;
+  color: white;
+  height: 100%;
+  line-height: 100%;  
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: inherit;
+}
+
+.sidenav {
+  border-right: 2px solid grey;
+  position: fixed;
+  width: 22vmax;
+  top: 16vmin;
+  left: 0;
+  padding: 15px;
+  overflow: scroll;
+}
+
+.col-9 {
+  display: block;
+  position: relative;
+  left: 23vmax;
+  right: 0px;
+  bottom: 0px;
+  margin-left: 10px;
+  padding: 0px;
+  padding-top: 10px;
+  height: 100%;
+  overflow: scroll;
+  z-index: -1;
+}
+
+#id-not-found {
+  color: #f15b4d;
+  font-size: 12px;
+  padding: 10px;
+  padding-bottom: 0px;
+  display: none;
+}
+
+iframe {
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+
+#patient-body {
+  height: 100%;
+}
+
+#patient-header {
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: top;
+  padding-bottom: 5px;
+}
+
+#qual-labels {
+  float: right;
+}
+
+.qual-label {
+  font-size: 12px;
+  border: 1px;
+  margin: 2px;
+  padding: 2px;
+  padding-left: 4px;
+  border-radius: 4px;
+}
+
+.warning {  background-color: #ffda8a; }
+.good { background-color: #74caa5; }
+
+.wrapper {
+  display: flex;
+  width: 100%;
+}
+
+#patient-title {
+  flex: 0 0 56%
+}
+
+table {
+  margin-top: 10px;
+  width: 100%;
+  font-size: 13px;
+  
+}
+
+th {
+  font-size: 16px;
+  font-weight: 450;
+}
+
+td {
+  padding-left: 4px;
+}
+
+thead {
+  background-color: white;
+}
+
+td:nth-child(1) {
+  width: 55%;
+  color: white;
+}
+
+td:nth-child(2) {
+  border: 1px solid #ebebeb;
+  background-color: white;
+}
+
+tr:nth-child(odd) td:nth-child(2) {
+  background-color: #ebebeb;
+}
+
+.patient { 
+  background-color: #1c9c64; 
+  border-color: #1c9c64;
+}
+.patient tr:nth-child(even) td:nth-child(1) { background-color: #5aa885; }
+.patient th {color: #1c9c64; }
+
+.sample { 
+  background-color: #3c4cb4; 
+  border-color: #3c4cb4
+}
+.sample tr:nth-child(even) td:nth-child(1) { background-color: #5863af; }
+.sample th {color: #3c4cb4; }
+
+.rna { 
+  background-color: #7c44a4;
+  border-color: #7c44a4;
+}
+.rna tr:nth-child(even) td:nth-child(1) { background-color: #8f68ac;}
+.rna th {color: #7c44a4; }
+
+.contam { 
+  background-color: #fca434;
+  border-color: #fca434;
+}
+.contam tr:nth-child(even) td:nth-child(1) { background-color: #fab459;}
+.contam th {color: #fca434; }
+
+.obvs-qual {
+  display: inline-block;
+  cursor: default;
+}
+
+#obvs-qual-label {
+  display: inline-block;
+  vertical-align: text-top;
+  height: 100%;
+  font-size: 11px;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 3px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  margin-bottom: 5px;
+}
+
+.low {
+  border: 1px solid #f15b4d;
+  color: #f15b4d;
+}
+
+.high {
+  border: 1px solid #fca434;
+  color: #fca434;
+}
+
+.unreviewed {
+  border: 1px solid #666666;
+  color: #666666;
+}
+
+.obvs-qual .hover-text {
+  display: none;
+  font-size: 11px;
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+  padding: 2px;
+  margin-left: 5px;
+
+  opacity: 0;
+  animation-name: fade-in;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+}
+
+.obvs-qual:hover .hover-text {
+  display: inline-block;
+  vertical-align: text-top;
+  opacity: 0.6;
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0.6;
+	}
+}
+
+.toggle {
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid black;
+  border-color: inherit;
+  background-color: white;
+  font-size: 18px;
+  padding-left: 6px;
+  padding-right: 6px;
+  margin-right: 5px;
+  border-radius: 6px;
+}
+
+.input-group-text {
+  background-color: white;
+  font-size: 16px;
+  margin-right: 1vmax;
+  text-align: left;
+  border: none;
+  padding: 0px;
+  color: #1c9c64;
+  font-weight: 500;
+}
+
+.filter {
+  width: 100%;
+  font-size: 14px;
+  margin-bottom: 1.5vmin;
+}
+
+#cohort-submit {
+  position: absolute;
+  right: 1vmax;
+}
+
+.btn-outline-success {
+  color: #1c9c64;
+  border: 1px solid #1c9c64;
+}
+
+.btn-outline-success:hover {
+  background-color: #1c9c64;
+}
+
+.checkbox-label {
+  display: inline-block;
+  padding-left: 4px;
+  color: rgb(65, 64, 64);
+  padding-right: 10px;
+  font-size: 14px;
+}
+
+.checkbox {
+  display: inline-block;
+}
+
+.checkbox-container {
+  display: block;
+  justify-content: flex-start;
+  overflow: auto;
+  margin-bottom: 1.5vmin;
+}
+
+.cohort-result {
+  margin-bottom: 1vmin;
+  font-size: 15px;
+}
+
+#cohort-result-title {
+  color: #3c4cb4;
+  font-weight: 500;
+  margin-bottom: 1vmin;
+}
+
+.circos td {
+  width: 50%;
+  background-color: white;
+  color: black;
+  border: none;
+}
+
+.circos tr:nth-child(odd) td:nth-child(2) {
+  background-color:white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.modal img {
+  cursor: default;
+}
+
+.modal-backdrop {
+  position: fixed; 
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+  z-index: 4;
+}
+
+.modal {
+  position: fixed;
+  background-color: white;
+  display: flex;
+  width: 80%;
+  height: 92%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  padding: 20px;
+  padding-top: 5px;
+  border-radius: 10px;
+  overflow: scroll;
+}
+
+.modal th {
+  font-size: 25px;
+}
+
+.modal td {
+  font-size: 16px;
+}
+
+.close-modal {
+  position: fixed;
+  right: 0;
+  top: 0;
+  margin: 10px;
+  border: 1px solid rgb(75, 75, 75);
+  color: rgb(75, 75, 75);
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+  z-index: 999;
+}
+
+#circos-description td{
+  font-size: 12px;
+  vertical-align: text-top;
+}
+
+#cohort-report {
+  height: 90%;
+  width: 100%;
+}
+
+.dtreeheading {
+  color: #7c44a4;
+}
+
+.features td{
+  font-size: 12px;
+  width: 50%;
+}
+
+.features th {
+  font-size: 20px;
+}
+
+.dtree td {
+  vertical-align: text-top;
+}
+
+.dtree-id {
+  border-radius: 4px;
+  padding: 2px;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.dtree-plots td {
+  font-size: 20px;
+  color: #7c44a4;
+  font-weight: 500;
+}

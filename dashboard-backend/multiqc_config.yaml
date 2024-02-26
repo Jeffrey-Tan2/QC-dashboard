@@ -1,0 +1,13 @@
+run_modules:
+    - picard
+    - samtools
+
+picard_config:
+    general_stats_target_coverage:
+        - 20
+        - 30
+
+extra_fn_clean_exts:
+    - '.insert_size_metrics'
+    - '.alignment_summary_metrics'
+    - '.base_distribution_by_cycle_metrics'

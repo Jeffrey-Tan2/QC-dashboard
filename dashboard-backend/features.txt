@@ -1,0 +1,15 @@
+Possible features for ML model
+
+FROM: multiqc_data/multiqc_general_stats.txt
+Picard_mqc-generalstats-picard-PCT_30X
+Picard_mqc-generalstats-picard-MEDIAN_COVERAGE
+Samtools_mqc-generalstats-samtools-mapped_passed
+Picard_mqc-generalstats-picard-MEAN_COVERAGE
+
+FROM: multiqc_data/multiqc_samtools_flagstat.txt
+duplicates_passed
+
+FROM: multiqc_data/multiqc_picard_gcbias.txt
+GC_DROPOUT
+GC_NC_40_59
+AT_DROPOUT
