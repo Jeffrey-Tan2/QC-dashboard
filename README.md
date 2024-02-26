@@ -5,6 +5,8 @@ Uses plots and graphs to visually display trends in data.
 Sqlalchemy and pymysql used to connect to database.
 Sklearn to predict how reliable data is.
 
+Example of plots generated: https://github.com/Jeffrey-Tan2/QC-dashboard/tree/main/qc-dashboard/src/plots
+
 # Tech/frameworks used
 - Python
 - JavaScript
